@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/title_base">
+
+        <!--  相当于多项选择-->
+        <ListPreference
+            android:defaultValue="light"
+            android:entries="@array/pref_theme_list_entries"
+            android:entryValues="@array/pref_theme_list_values"
+            android:key="@string/key_theme"
+            android:summary="%s"
+            android:title="@string/setting_theme" />
+        <!-- 两种选择-->
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="@string/key_open"
+            android:summaryOff="@string/summary_off_open"
+            android:summaryOn="@string/summary_on_open"
+            android:title="@string/title_open" />
+
+
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/title_option">
+        <Preference
+            android:key="@string/key_clear"
+            android:title="@string/summary_clear" />
+
+    </PreferenceCategory>
+</PreferenceScreen>
